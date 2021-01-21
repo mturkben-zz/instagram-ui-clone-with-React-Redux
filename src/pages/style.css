@@ -1,0 +1,54 @@
+
+
+
+/* Search Bar */
+.input-group-sm input[type="text"] {
+    background-color: #fafafa;
+    font-family:  FontAwesome;
+}
+.input-group-sm input[type="text"]:focus {
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+    outline: none !important;
+}
+
+/* Header Right Bar */
+.mt-header-right > a {
+    text-decoration: none;
+    color:#000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.mt-header-right > a > ion-icon , 
+.mt-header-right > input   {
+    font-size: 26px;
+    margin-right:3px;
+    margin-left:3px;
+    padding:2px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+}
+/* Header User İmage */
+input[type="image"]:focus {
+    outline: none !important;
+}
+
+.mt-header-right > div > a  {
+    font-size: 16px;
+    justify-content:flex-start;
+    padding:10px 20px ;
+    align-items: center;
+    display: flex;
+}
+.mt-header-right > div > a:active {
+    color:#000 !important;
+    background-color:#fff !important;
+}
+.mt-header-right > div > a > ion-icon {
+    padding-right: 5px ;
+    font-size:20px;
+}
+.mt-header-right .dropdown-divider {
+    border-top: 2px solid #e9ecef;
+} 
