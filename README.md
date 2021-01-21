@@ -10,4 +10,10 @@ npm start**
 
 
 
-## > I use the following modules;
+### I use the following modules;
+
+- react 
+- redux
+- react-redux
+- redux-thunk
+- react-router-dom
