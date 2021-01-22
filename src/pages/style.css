@@ -21,7 +21,7 @@
     display: flex;
 }
 .mt-header-right > a > ion-icon , 
-.mt-header-right > input   {
+.mt-header-right > div > input   {
     font-size: 26px;
     margin-right:3px;
     margin-left:3px;
@@ -34,18 +34,34 @@ input[type="image"]:focus {
     outline: none !important;
 }
 
-.mt-header-right > div > a  {
+/* Clean Button Style */
+.mt-header-right .dropdown,
+.mt-header-right .dropdown > button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.mt-header-right .dropdown > button {
+    background-color: #fff;
+    outline: none !important;
+    border: none !important;
+    font-size: 26px;
+}
+/*  Dont look this area */
+
+
+.mt-header-right > div > div > a  {
     font-size: 16px;
     justify-content:flex-start;
     padding:10px 20px ;
     align-items: center;
     display: flex;
 }
-.mt-header-right > div > a:active {
+.mt-header-right > div > div > a:active {
     color:#000 !important;
     background-color:#fff !important;
 }
-.mt-header-right > div > a > ion-icon {
+.mt-header-right > div > div > a > ion-icon {
     padding-right: 5px ;
     font-size:20px;
 }
