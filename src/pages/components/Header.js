@@ -58,7 +58,7 @@ const Header = props => {
                             <Link to='/explore'><ion-icon name={_isPage[0] === 'explore' ?  _isPage[1] : 'compass-outline'}/></Link>
                             
                             <div className='dropdown'>
-                                <input type='image' alt='Heart' onBlur={()=> {setProfile(false);changeNavbarStyle()}} onFocus={() => {setProfile(true);_setIsPage([])}}  src={profile ? Heart : HeartOutline}  width="30" id="rgeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                <input type='image' alt='Heart' onBlur={()=> {setProfile(false);changeNavbarStyle()}} onFocus={() => {setProfile(true);_setIsPage([])}}  src={profile ? Heart : HeartOutline}  width="31" id="rgeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                 <div className="dropdown-menu dropdown-menu-right shadow-sm p-0" aria-labelledby="rgeDropdown">
                                     <a className="dropdown-item" href="/#">Action</a>
                                     <a className="dropdown-item" href="/#">Another action</a>
