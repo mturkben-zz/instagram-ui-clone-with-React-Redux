@@ -68,3 +68,99 @@ input[type="image"]:focus {
 .mt-header-right .dropdown-divider {
     border-top: 2px solid #e9ecef;
 } 
+
+/*  heart-page   */
+
+.heart-page  > .dropdown-menu{
+    width:500px !important;
+    max-height: 362px;
+    min-height: 100px;
+    overflow-y: auto;
+}
+.heart-page  .heart-item {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+.h-goto-page {
+    border: 0 !important;
+    outline: 0 !important;
+    background-color:#fff !important;
+}
+.h-rounded-item {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color:#fff;
+    height: 40px;
+    width : 40px;
+    border-radius:50%;
+}
+.h-rounded-item.h-bg-red {
+    background-color:#ed4956;
+}
+.h-text-item {
+    display: flex;
+    justify-content:center;
+    align-items: start;
+    flex-direction: column;
+}
+.h-text-item p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px !important;
+}
+.h-text-item sup {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 15px;
+    color:#404044;
+}
+.h-text-item sup > span {
+    font-weight: 600;
+    color: #00376b;
+}
+.h-right-area ion-icon {
+    opacity: 0.7;
+    margin-top:10px;
+}
+
+.h-right-area button {
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #dfdfdf;
+    background-color: #fff !important;
+}
+.modal-dialog {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.modal-content {
+    border-radius: 12px;
+    width:400px !important;
+    overflow: hidden;
+}
+.modal-body {
+    padding: 0px !important;
+}
+.modal-body > div > img {
+    margin: 20px ;
+}
+.h-modal-footer > button  {
+    padding:10px;
+    background-color:#fff !important;
+    border: 0px !important;
+    outline: 0 !important;
+    border-top: 1px solid #dfdfdf !important;
+}
+.h-modal-footer > button:first-child {
+    color:red;
+    font-weight: 600;
+}
+.h-modal-footer > button:last-child {
+    margin:0px;
+}
+/*  heart-page   */

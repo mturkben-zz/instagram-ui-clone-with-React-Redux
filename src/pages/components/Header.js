@@ -2,10 +2,11 @@ import React , {useState,useEffect} from 'react'
 
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import { Modal } from 'react-bootstrap';
 
 import Logo from "../../assets/logo.png"
 import UserLogo from '../../assets/profile.png'
-
+import TestPhoto from '../../assets/test_photo.jpg'
 
 import Heart  from '../../assets/heart.png'
 import HeartOutline from '../../assets/heartOutline.png'
@@ -19,7 +20,10 @@ const Header = props => {
     const [search , setSearch] = useState(false)
     const [profile , setProfile] = useState(false)
     const [heart, setHearth] = useState(false)
+    const [show_goto_page, setShow_Goto_Page] = useState(false)
     const [_isPage , _setIsPage] = useState([])
+
+    const [show, setShow] = useState(false);
 
     useEffect(()=> {
         changeNavbarStyle();
@@ -57,12 +61,78 @@ const Header = props => {
                             <Link to='/msg'><ion-icon name={_isPage[0] === 'msg' ?  _isPage[1] : 'chatbubble-ellipses-outline'}/></Link>
                             <Link to='/explore'><ion-icon name={_isPage[0] === 'explore' ?  _isPage[1] : 'compass-outline'}/></Link>
                             
-                            <div className='dropdown'>
+                            <div className='dropdown heart-page'>
                                 <input type='image' alt='Heart' onBlur={()=> {setProfile(false);changeNavbarStyle()}} onFocus={() => {setProfile(true);_setIsPage([])}}  src={profile ? Heart : HeartOutline}  width="31" id="rgeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                 <div className="dropdown-menu dropdown-menu-right shadow-sm p-0" aria-labelledby="rgeDropdown">
-                                    <a className="dropdown-item" href="/#">Action</a>
-                                    <a className="dropdown-item" href="/#">Another action</a>
-                                    <a className="dropdown-item" href="/#">Something else here</a>
+                                    {
+                                        show_goto_page ? 
+                                            <>
+                                                <div> THİS  PAGE </div>
+                                            </>
+                                        :   
+                                            <>
+                                                <div className="d-flex heart-item">
+                                                    <button onClick={() => setShow_Goto_Page(true)} className="p-0 m-0 h-goto-page d-flex w-100 justify-content-between align-items-center">
+                                                        <div className="d-flex p-0 m-0">
+                                                            <div className='h-rounded-item h-bg-red m-2'>
+                                                                2
+                                                            </div>
+                                                            <div className='h-text-item'>
+                                                                <p> Takip İstekleri </p>
+                                                                <sup> İstekleri onayla veya yok say </sup>
+                                                            </div>
+                                                        </div>
+                                                        <div className='h-right-area'>
+                                                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div className="d-flex heart-item">
+                                                    <div className="d-flex p-0 m-0">
+                                                        <div className='h-rounded-item m-2'>
+                                                            <img className="img-fluid" src={UserLogo} alt='UserLogo' width='43'/>
+                                                        </div>
+                                                        <div className='h-text-item'>
+                                                            <p>  <b>zuck </b>   </p>
+                                                            <sup> Seni takip etmeye başladı. <spm> 4h </spm> </sup>
+                                                        </div>
+                                                    </div>
+                                                    <div className='h-right-area'>
+                                                        <button className='btn btn-light' variant="primary" onClick={()=> setShow(true)}>
+                                                            Takiptesin
+                                                        </button>
+                                                        <Modal centered show={show} onHide={() => setShow(false)}>
+                                                            <Modal.Body>
+                                                                <div className="d-flex justify-content-center align-items-center flex-column">
+                                                                    <img className="img-fluid" src={UserLogo} alt='UserLogo' width='60'/>
+                                                                    <div className='my-4'>
+                                                                        @zuck'i takibi bırak
+                                                                    </div>
+                                                                    <div className='w-100 p-0 m-0 h-modal-footer'>
+                                                                        <button className='btn-block'> Takipi Bırak</button>
+                                                                        <button className='btn-block' onClick={()=> setShow(false)} > İptal</button>
+                                                                    </div>
+                                                                </div>
+                                                            </Modal.Body>
+                                                        </Modal>
+                                                    </div>
+                                                </div>
+                                                <div className="d-flex heart-item">
+                                                    <div className="d-flex p-0 m-0">
+                                                        <div className='h-rounded-item m-2'>
+                                                            <img className="img-fluid" src={UserLogo} alt='UserLogo' width='45'/>   
+                                                        </div>
+                                                        <div className='h-text-item'>
+                                                            <p> <b>zuck </b> bir yorumda senden bahsetti: </p>
+                                                            <sup> <span >@mturkben721 </span>I like your style :) </sup>
+                                                        </div>
+                                                    </div>
+                                                    <div className='h-right-area'>
+                                                    <img className="img-fluid" src={TestPhoto} alt='UserLogo' width='40'/>   
+                                                    </div>
+                                                </div>
+                                            </>
+                                    }
                                 </div>
                             </div>
 
@@ -76,7 +146,6 @@ const Header = props => {
                                     <div className='dropdown-divider m-0'/>
                                     <a className="dropdown-item" href="/#"> Log Out</a>
                                 </div>
-
                             </div>
 
                         </div>

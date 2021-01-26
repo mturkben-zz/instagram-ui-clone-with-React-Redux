@@ -4,12 +4,13 @@ import {Switch,Route ,BrowserRouter} from "react-router-dom"
 
 // Components
 import Header from "./components/Header"
+import ErrorPage from './components/ErrorPage'
 
 // Pages 
 import HomePage from './homePage/HomePage'
-import ErrorPage from './components/ErrorPage'
 import MessagePage from './messagePage/MessagePage'
 import ExplorePage from './explorePage/ExplorePage'
+
 
 const App = () => {
   return(
