@@ -37,16 +37,24 @@ const Header = props => {
             default: return props.fun.isPage
         } 
     }
-    
-    const afasdfasdafsdafs = () => {
-            if(_Cprofile === true) {
-                setProfile(false);
-                changeNavbarStyle();
-            } else {
-                console.log('üzerinde');
-            }
+
+    const openModal = () => {
+        setProfile(true);_setIsPage([]);
     }
-    
+
+    const onArea = () => {
+        if(_Cprofile) {
+            setProfile(false);changeNavbarStyle();
+        }
+    }
+
+    const notOnArea = e => {
+        e.target.ownerDocument.onclick = () => {
+            changeNavbarStyle()
+            setProfile(false);
+        }
+    }
+
     return (
         <div className="container-fluid border-bottom bg-white">
             <div className="container px-5 py-3">
@@ -67,10 +75,15 @@ const Header = props => {
                             <Link to='/explore'><ion-icon name={_isPage[0] === 'explore' ?  _isPage[1] : 'compass-outline'}/></Link>
                             
                             <div className='dropdown heart-page'>
-                                <input type='image' alt='Heart' onClick={() => {setProfile(true);_setIsPage([])}}  src={profile ? Heart : HeartOutline}  width="31" id="rgeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                <a href='javascript:void(0)' onClick={e => openModal(e)} id="rgeDropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img alt='Heart' src={profile ? Heart : HeartOutline} width="25"/>
+                                </a>
                                 {
                                     profile ? 
-                                    <div className="h-main-container p-0" onMouseOver={() => _CsetProfile(false)} onMouseOut={() => _CsetProfile(true)}>
+                                    <div className="h-main-container p-0" 
+                                        onMouseOver={() => {_CsetProfile(false);onArea()}} 
+                                        onMouseLeave={(e) => {_CsetProfile(true);notOnArea(e)}}
+                                    >
                                         {
                                             show_goto_page ?
                                                 <>

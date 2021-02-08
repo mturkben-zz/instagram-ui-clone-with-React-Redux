@@ -109,7 +109,7 @@ input[type="image"]:focus {
 .h-text-item {
     display: flex;
     justify-content:center;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
 }
 .h-text-item p {
