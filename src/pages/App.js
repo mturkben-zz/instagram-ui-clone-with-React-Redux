@@ -6,7 +6,7 @@ import {Switch,Route ,BrowserRouter} from "react-router-dom"
 import Header from "./components/Header"
 import ErrorPage from './components/ErrorPage'
 
-// Pages 
+// Pages
 import HomePage from './homePage/HomePage'
 import MessagePage from './messagePage/MessagePage'
 import ExplorePage from './explorePage/ExplorePage'
