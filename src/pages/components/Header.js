@@ -46,7 +46,7 @@ const Header = props => {
 	}
 	
 	return (
-		<div className="container-fluid border-bottom bg-white">
+		<div className="container-fluid border-bottom bg-white fixed-top">
 			<div className="container px-5 py-3">
 				<div className="row d-flex justify-content-center align-items-center">
 					<div className="col">
@@ -91,16 +91,16 @@ const Header = props => {
 								<div className="dropdown-menu dropdown-menu-right shadow-sm p-0"
 								     aria-labelledby="prfDropdown">
 									<a className="dropdown-item" href="/#">
-										<ion-icon name="person-circle-outline"></ion-icon>
+										<ion-icon name="person-circle-outline"/>
 										Profile</a>
-									<a>
-										<ion-icon name="bookmark-outline"></ion-icon>
+									<a className="dropdown-item" href="/#">
+										<ion-icon name="bookmark-outline"/>
 										Saved</a>
 									<a className="dropdown-item" href="/#">
-										<ion-icon name="settings-outline"></ion-icon>
+										<ion-icon name="settings-outline"/>
 										Settings</a>
 									<a className="dropdown-item" href="/#">
-										<ion-icon name="repeat-outline"></ion-icon>
+										<ion-icon name="repeat-outline"/>
 										Switch Accounts</a>
 									<div className='dropdown-divider m-0'/>
 									<a className="dropdown-item" href="/#"> Log Out</a>
