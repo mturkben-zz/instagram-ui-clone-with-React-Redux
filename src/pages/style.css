@@ -86,7 +86,7 @@ input[type="image"]:focus {
     min-height: 100px;
     overflow-y: auto;
     background-color: #fff !important;
-    box-shadow: 0px 0px 5px 0px rgb(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0px #00000050;
     border-radius: 3px;
 }
 
@@ -279,5 +279,38 @@ input[type="image"]:focus {
     font-size: 11px;
     font-weight: 400;
     line-height: 13px;
+}
+
+.hp-l-posts {
+    border: 1px solid #dbdbdb;
+}
+
+.hp-l-posts-header {
+    border-bottom: 1px solid #efefef;
+}
+.hp-l-posts-header-l {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.hp-l-posts-header-l img {
+    padding: 1px;
+    border: 2px solid #ff0000;
+}
+
+.hp-l-posts-header-l b {
+    color: #262626;
+}
+
+.hp-l-posts-header-r {
+    text-align: right;
+    cursor: pointer;
+}
+.hp-l-posts-header-r > a {
+    top: -3px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
 }
 /* Home Page */

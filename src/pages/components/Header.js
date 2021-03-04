@@ -74,7 +74,7 @@ const Header = props => {
 							</Link>
 							
 							<div className='dropdown heart-page'>
-								<a href="/#" onClick={e => openModal(e)} id="rgeDropdown"
+								<a href="javascript::void(0)" onClick={e => openModal(e)} id="rgeDropdown"
 								   aria-haspopup="true" aria-expanded="false">
 									<img alt='Heart' src={profile ? Heart : HeartOutline} width="25"/>
 								</a>
