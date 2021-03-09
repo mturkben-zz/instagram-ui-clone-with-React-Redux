@@ -20,6 +20,9 @@ const HomePage = props => {
 					<div className="row px-5" style={{marginTop: 100}}>
 						<div className="col-12 col-lg-8">
 							<Shares/>
+							<Shares/>
+							<Shares/>
+							<Shares/>
 						</div>
 						<div className="col-lg-4 hp-r-side position-sticky d-md-none d-lg-block">
 							<div className="position-fixed" style={{width: 280}}>

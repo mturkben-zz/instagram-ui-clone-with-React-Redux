@@ -187,11 +187,14 @@ input[type="image"]:focus {
     color: red;
     font-weight: 600;
 }
+.h-main-modal > button:nth-child(2) {
+    color: red;
+    font-weight: 600;
+}
 
 .h-modal-footer > button:last-child {
     margin: 0px;
 }
-
 /*  heart-page */
 
 
@@ -283,6 +286,10 @@ input[type="image"]:focus {
 
 .hp-l-posts {
     border: 1px solid #dbdbdb;
+    margin-top: 50px;
+}
+.hp-l-posts:last-child {
+    margin-bottom: 50px;
 }
 
 .hp-l-posts-header {
@@ -312,5 +319,20 @@ input[type="image"]:focus {
     font-size: 30px;
     text-decoration: none;
     color: #000;
+}
+.hp-l-posts-main .p-3 {
+    border-bottom: 1px solid #efefef;
+}
+
+.hp-l-posts-main > div ion-icon {
+    font-size: 30px;
+    padding: 5px;
+}
+.hp-l-posts-main > div input[type="text"],
+.hp-l-posts-main > div input[type="submit"] {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 19px;
 }
 /* Home Page */
