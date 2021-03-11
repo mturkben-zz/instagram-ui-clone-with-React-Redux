@@ -5,7 +5,7 @@ import {is_page} from '../../actions/funAction'
 import NoProfileLogo from '../../assets/no_profile_photo.jpg'
 import HomePageRight from "./HomePageRight";
 import Shares from "./Shares";
-
+import HomePageStory from "./HomePageStory";
 import "../style.css"
 
 const HomePage = props => {
@@ -19,6 +19,7 @@ const HomePage = props => {
 				<div className="container">
 					<div className="row px-5" style={{marginTop: 100}}>
 						<div className="col-12 col-lg-8">
+							<HomePageStory/>
 							<Shares/>
 							<Shares/>
 							<Shares/>

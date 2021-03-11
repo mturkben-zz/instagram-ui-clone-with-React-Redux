@@ -12,7 +12,6 @@ const Shares = () => {
 		setYorumStyle( yorum !== "" ? true : false);
 	},[yorum])
 	
-	console.log(yorum);
 	return (
 		<div className="container hp-l-posts">
 			<div className="row hp-l-posts-header">
