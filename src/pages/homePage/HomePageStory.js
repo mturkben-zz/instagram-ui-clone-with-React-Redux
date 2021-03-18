@@ -60,6 +60,9 @@ const HomePageStory = () => {
 					<span>mturkben</span>
 				</div>
 				<div className="hp-top-story">
+					
+					
+					
 					<img className="img-fluid rounded-circle m-2 ml-0" src={NoProfileLogo} width="70" height="70"
 					     alt="ProfilePicture"/>
 					<span>mturkben</span>
